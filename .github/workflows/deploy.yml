@@ -1,4 +1,4 @@
-﻿name: Deploy WordPress to FTP
+﻿name: Deploy WordPress Theme to FTP
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy via FTP
+      - name: Deploy theme via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_HOST }}
@@ -22,6 +22,12 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          local-dir: rush-wp-theme-fixed
-          server-dir: /www/wp-content/themes/rush-wp-theme-fixed
-          security: insecure
+          local-dir: ./rush-wp-theme-fixed/
+          server-dir: /www/wp-content/themes/rush-wp-theme-fixed/
+          security: loose
+          exclude: |
+            **/.git*
+            **/.github*
+            **/node_modules/**
+            **/.vscode/**
+            README.md
