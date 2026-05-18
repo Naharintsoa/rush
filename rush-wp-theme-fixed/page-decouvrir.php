@@ -17,7 +17,7 @@ get_header(); ?>
         L'école <span class="text-gradient-rush">vue de l'intérieur</span>
       </h1>
       <p class="page-hero-desc" style="max-width:40rem">
-        Notre notre équipe, nos profs, nos événements : plongez dans l'ambiance Rush School
+        Notres notres équipe, nos profs, nos événements : plongez dans l'ambiance Rush School
         et rencontrez celles et ceux qui font vivre l'école au quotidien.
       </p>
     </div>

@@ -24,4 +24,4 @@ jobs:
           port: 21
           local-dir: rush-wp-theme-fixed
           server-dir: /www/wp-content/themes/rush-wp-theme-fixed
-          git-ftp-args: --insecure
+          security: insecure
